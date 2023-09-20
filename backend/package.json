@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Back end for the to do list project using MERN stack",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "MERN",
+    "MongoDB",
+    "Express",
+    "React",
+    "Node"
+  ],
+  "author": "\"Johnatan Ortiz\", \"Ruben Florez, \"Juan Gomez\", \"Charline Mosquera\"",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
