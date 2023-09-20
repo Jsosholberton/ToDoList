@@ -1,6 +1,6 @@
 > **Attention**
-> You need to install the requeriments
-
+> You need to install the requeriments.
+> the node version use are 18.0.0
 
 <h1>Installation requeriments:</h1>
 <details>
