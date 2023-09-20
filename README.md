@@ -19,6 +19,8 @@
   <pre>$ npm i dotenv</pre>
   Install bcrypt for hashear the pwd:
   <pre>$ npm i bcrypt</pre>
+  Install JsonWebToken:
+  <pre>$ npm i jsonwebtoken</pre>
   <br>
   <br>
   
