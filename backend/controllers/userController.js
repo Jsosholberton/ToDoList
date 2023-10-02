@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import genId from "../helpers/generateid.js";
 import genJWT from "../helpers/genereteJWT.js";
+import { emailReg, emailPwd } from "../helpers/emails.js"
 
 const register = async (req, res) => {
 
@@ -17,7 +18,14 @@ const register = async (req, res) => {
         const user = new User(req.body);
         user.token = genId();
         const userSave = await user.save();
-        res.json(userSave);
+
+        emailReg({
+            email: user.email,
+            name: user.name,
+            token: user.token
+        });
+
+        res.json({msg: "User created correctly, check your email to confirm the account"});
     } catch (err) {
         console.log(err);
     }
@@ -82,6 +90,13 @@ const lostPwd = async (req, res) => {
         instUser.token = genId();
         await instUser.save();
         res.json({msg: "We have sent an email with instructions"})
+
+        emailPwd({
+            email: instUser.email,
+            name: instUser.name,
+            token: instUser.token
+        });
+
     } catch (err) {
         console.log(err);
     }

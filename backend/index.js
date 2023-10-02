@@ -1,6 +1,7 @@
 import express from "express";
 import conectDB from "./config/db.js";
 import dotenv from "dotenv";
+import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import projectRoutes from "./routes/projectRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
@@ -16,16 +17,16 @@ const whitelist = [process.env.FRONTEND_URL];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.includes(origin)) {
-      // Puede consultar la API
+      // Consult the API
       callback(null, true);
     } else {
-      // No esta permitido
-      callback(new Error("Error de Cors"));
+      // Error
+      callback(new Error("Error of Cors"));
     }
   },
 };
 
-app.use(cors(corsOptions));
+app.use(cors());//corsOptions));
 
 // Routing
 app.use("/api/users", userRoutes);
