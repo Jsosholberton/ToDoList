@@ -3,8 +3,7 @@ import { Link } from "react-router-dom"
 const Login = () => {
   return (
     <>
-          <h1 className="text-sky-600 font-black text-6xl capitalize">inicia sesion y administra
-              tus {''}  <span className="text-slate-700">proyectos</span>
+          <h1 className="text-sky-600 font-black text-6xl capitalize"> Control yours Projects & Define Your  {''}  <span className="text-slate-700">Future</span>
           </h1>
 
        <form className="my-10 bg-white shadow rounded-lg p-10 ">
@@ -16,7 +15,7 @@ const Login = () => {
             <input
               id="email" 
               type="email"
-              placeholder="Email de Registro"
+              placeholder="Email"
               className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
             
             />
@@ -25,18 +24,18 @@ const Login = () => {
             <label 
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password"
-            >Email</label>
+            >Password</label>
             <input
               id="PASSWORD" 
               type="password"
-              placeholder="password de Registro"
+              placeholder="Password "
               className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
             
             />
           </div>
             <input 
               type="submit"
-              value="Iniciar Sesion"
+              value="Login"
               className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold
               rounded hover:cursor-pointer hover:bg-sky-800 transition colors"
             />
@@ -47,12 +46,12 @@ const Login = () => {
           <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="registrar"
-          >¿No tienes una cuenta? Registrate </Link>
+          >Do you dont have a account? Sign up </Link>
 
           <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="olvidepassword"
-          >¿Olvide mi Password </Link>
+          >Forget My Password</Link>
 
           
 

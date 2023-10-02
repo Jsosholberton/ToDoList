@@ -3,8 +3,9 @@ import { Link } from "react-router-dom"
 const Olvidepassword = () => {
   return (
     <>
-    <h1 className="text-sky-600 font-black text-6xl capitalize">Recuperar tu acceso y no pierdas tus {''}  <span className="text-slate-700">proyectos</span>
-    </h1>
+    <h1 className="text-sky-600 font-black text-6xl capitalize">Restore Your password And Not lose Your
+           {''}  <span className="text-slate-700"> Projects</span>
+          </h1>
 
  <form className="my-10 bg-white shadow rounded-lg p-10 ">
 
@@ -12,11 +13,11 @@ const Olvidepassword = () => {
       <label 
       className="uppercase text-gray-600 block text-xl font-bold"
       htmlFor="email"
-      >Nuevo password</label>
+      >Email</label>
       <input
         id="email" 
         type="email"
-        placeholder="password de registro"
+        placeholder="Put your Email"
         className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
 
       
@@ -25,7 +26,7 @@ const Olvidepassword = () => {
    
       <input 
         type="submit"
-        value="Crear Cuenta"
+        value="Recover Access"
         className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold
         rounded hover:cursor-pointer hover:bg-sky-800 transition colors"
       />
@@ -36,12 +37,12 @@ const Olvidepassword = () => {
     <Link
     className="block text-center my-5 text-slate-500 uppercase text-sm"
     to="/"
-    >¿Ya tienes una Cuenta Inicia Sesion </Link>
+    >You Have have a account? Sign In   </Link>
 
     <Link
     className="block text-center my-5 text-slate-500 uppercase text-sm"
     to="/registrar"
-    >¿No tienes una cuenta? registrate </Link>
+    >Do you dont have a account? Sign up </Link>
 
     
 

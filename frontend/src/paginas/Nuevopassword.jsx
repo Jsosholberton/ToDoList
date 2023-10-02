@@ -3,8 +3,8 @@
 const Nuevopassword = () => {
   return (
     <>
-          <h1 className="text-sky-600 font-black text-6xl capitalize">Reestablese tu password y no pierdas acceso a tus
-           {''}  <span className="text-slate-700">proyectos</span>
+          <h1 className="text-sky-600 font-black text-6xl capitalize">Restore Your password And Not lose Your
+           {''}  <span className="text-slate-700">Projects</span>
           </h1>
 
        <form className="my-10 bg-white shadow rounded-lg p-10 ">
@@ -12,59 +12,33 @@ const Nuevopassword = () => {
             <label 
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="nombre"
-            >Nuevo password</label>
+            >New password</label>
             <input
-              id="nombre" 
+              id="password" 
               type="text"
-              placeholder="Tu Nombre"
+              placeholder="New password"
               className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
             
             />
           </div>
 
-          <div className="my-5">
-            <label 
-            className="uppercase text-gray-600 block text-xl font-bold"
-            htmlFor="email"
-            >Email</label>
-            <input
-              id="email" 
-              type="email"
-              placeholder="Email de Registro"
-              className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
-            
-            />
-          </div>
-         
-          <div className="my-5">
-            <label 
-            className="uppercase text-gray-600 block text-xl font-bold"
-            htmlFor="password"
-            >Email</label>
-            <input
-              id="PASSWORD" 
-              type="password"
-              placeholder="password de Registro"
-              className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
-            
-            />
-          </div>
+        
           <div className="my-5">
             <label 
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password2"
-            >Repetir Password</label>
+            >Repeat Password</label>
             <input
               id="PASSWORD2" 
               type="password"
-              placeholder="Repetir Tu Password"
+              placeholder="Repeat Password"
               className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
             
             />
           </div>
             <input 
               type="submit"
-              value="Guardar nuevo password"
+              value="Save The password"
               className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold
               rounded hover:cursor-pointer hover:bg-sky-800 transition colors"
             />
