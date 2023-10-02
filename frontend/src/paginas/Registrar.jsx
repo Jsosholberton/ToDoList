@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from "react-router-dom"
 import Alerta from '../components/Alerta'
+import axios from 'axios'
 
   const Registrar = () => {
   const [ name, setName ] = useState ('')
@@ -10,22 +11,53 @@ import Alerta from '../components/Alerta'
   const [ alerta, setAlerta ] = useState({})
   
   
-  
-  
-  const handlesubmit = e => {
+  const handlesubmit = async e => {
     e.preventDefault();
     if([name, email, password, repeatpassword].includes('')) {
       setAlerta({
-          Msg: 'All fields are required',
+          msg: 'All fields are required',
           error: true
       })
       return
     }
+
+    if(password !== repeatpassword) {
+      setAlerta({
+        msg: 'The password must the be same',
+        error: true
+    })
+    return
+    }
+    if(password.length < 8) {
+      setAlerta({
+        msg: 'The password must the be greater than 8 characters',
+        error: true
+    })
+    return
+    }
+    
+    setAlerta({})
+
+    // space for the api
+    try {
+      const { data } = await axios.post('http://localhost:4000/api/users',{
+        name, email, password })
+
+        console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+
   }
+
+  const { msg } = alerta
+
   return (
     <>
           <h1 className="text-sky-600 font-black text-6xl capitalize">Create your account and Manage your {''}  <span className="text-slate-700">Project</span>
           </h1>
+
+        { msg && <Alerta alerta={alerta} /> }
 
        <form
        

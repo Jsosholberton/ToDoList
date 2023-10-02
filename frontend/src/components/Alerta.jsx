@@ -4,8 +4,6 @@ const Alerta = ({alerta}) => {
     bg-gradient-to-br text-center p-3 rounded-xl uppercase text-white
     font-bold text-sm my-10 `}>
         {alerta.msg}
-   
-    
     </div>
   )
 }
