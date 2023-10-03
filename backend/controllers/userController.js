@@ -33,9 +33,9 @@ const register = async (req, res) => {
 
 const authenticate = async (req, res) => {
 
-    const { user, email, password } = req.body;
+    const { email, password } = req.body;
     // check if the email exists
-    const instUser = await User.findOne({ $or: [{email}, {user}] });
+    const instUser = await User.findOne({email});
     if(!instUser) {
         const error = new Error('User not exist');
         return res.status(404).json({msg: error.message});
