@@ -17,7 +17,7 @@ const ConfirmarCuenta = () => {
       try {
         const url = `http://localhost:4000/api/users/confirm/${id}`
         const { data } = await axios(url)
-
+        console.log(data)
         setAlerta({
           msg: data.msg,
           error: false

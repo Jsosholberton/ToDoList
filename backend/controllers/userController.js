@@ -71,15 +71,15 @@ const confirm = async (req, res) => {
         userConfirm.confirm = true;
         userConfirm.token = "";
         await userConfirm.save();
-        res.json({msg: "User confirm correctly"});
+        return res.json({msg: "User confirm correctly"});
     } catch (err) {
         console.log(err);
     }
 }
 
 const lostPwd = async (req, res) => {
-    const { email, user } = req.body;
-    const instUser = await User.findOne({ $or: [{email}, {user}] });
+    const { email } = req.body;
+    const instUser = await User.findOne({email});
 
     if(!instUser) {
         const error = new Error('User not exist');

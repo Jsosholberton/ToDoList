@@ -142,7 +142,7 @@ import axios from 'axios'
           <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/"
-          >You Have have a account? Sign In </Link>
+          >You Have a account? Sign In </Link>
 
           <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
