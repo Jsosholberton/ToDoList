@@ -6,8 +6,8 @@ import { emailReg, emailPwd } from "../helpers/emails.js"
 const register = async (req, res) => {
 
     // register duplicate
-    const { email, user } = req.body;
-    const existUser = await User.findOne({ $or: [{email}, {user}] });
+    const { email } = req.body;
+    const existUser = await User.findOne({email});
 
     if (existUser) {
         const error = new Error('User or Email actually is register');

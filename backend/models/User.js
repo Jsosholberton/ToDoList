@@ -27,7 +27,7 @@ const userSchema = mongoose.Schema({
     },
     user: {
         type: String,
-        requiered: true,
+        requiered: false,
         trim: true,
         unique: true,
     }

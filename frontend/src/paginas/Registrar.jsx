@@ -38,16 +38,19 @@ import axios from 'axios'
     
     setAlerta({})
 
-    // space for the api
     try {
       const { data } = await axios.post('http://localhost:4000/api/users',{
         name, email, password })
-
-        console.log(data)
+        setAlerta({
+          msg: data.msg,
+          error: false
+      })
     } catch (error) {
-      console.log(error)
+      setAlerta({
+        msg: error.response.data.msg,
+        error: true
+    })
     }
-
   }
 
   const { msg } = alerta

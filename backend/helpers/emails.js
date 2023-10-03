@@ -18,7 +18,7 @@ export const emailReg = async (datos) => {
     text: "Confirm your account on ToDoList",
     html: `<p>Hi: ${name} confirm your account on ToDoList</p>
     <p>Your account is almost ready you just have to confirm in the next link:
-    <a href="${process.env.FRONTEND_URL}/confirmar/${token}">Confirm the account</a> </p>
+    <a href="${process.env.FRONTEND_URL}confirmar/${token}">Confirm the account</a> </p>
     <p>If you didn't create this account, you can ignore the message</p>
     `
   });
