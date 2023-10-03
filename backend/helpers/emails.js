@@ -42,7 +42,7 @@ export const emailPwd = async (datos) => {
       text: "Restore your password on ToDoList",
       html: `<p>Hi: ${name} restore your password from your account on ToDoList</p>
       <p>Follow the next link to restore your password:
-      <a href="${process.env.FRONTEND_URL}olvide-password/${token}">Restore</a> </p>
+      <a href="${process.env.FRONTEND_URL}olvidepassword/${token}">Restore</a> </p>
       <p>If you didn't restore the password, you can ignore the message</p>
       `
     });
