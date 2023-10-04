@@ -11,8 +11,8 @@ const Sidebar = () => {
 
             <Link
                 to="crear-proyecto"
-                className="bg-sky-600 w-full p-3 text-white uppercase
-                font-bold block mt-5 text-center rounded-lg"
+                className="bg-black w-full p-3 text-white uppercase
+                font-bold block mt-5 text-center rounded-lg rounded cursor-pointer hover:bg-gray-500 transition-colors"
             >New Project</Link>
 
         </aside>
