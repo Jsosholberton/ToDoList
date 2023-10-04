@@ -52,7 +52,7 @@ const Login = () => {
         </h2>
       </div>
       <h1 className="text-gray-800 font-black text-6xl capitalize">
-        Control your Projects &nbsp;
+        Control yours Projects &nbsp;
         <span className="text-red-600">Define Your Future</span>
         <span className="text-3xl">.</span>
       </h1>
