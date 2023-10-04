@@ -53,6 +53,7 @@ const Olvidepassword = () => {
         <span className="text-red-600"> Lose</span>
         <span className="text-gray-900"> Your</span>
         <span className="text-red-600"> Projects</span>
+        <span className="text-3xl">.</span>
       </h1>
 
       {msg && <Alerta alerta={alerta} />}
