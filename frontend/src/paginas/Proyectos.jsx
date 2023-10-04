@@ -4,7 +4,7 @@ const Proyectos = () => {
   const { proyectos } = useProyectos()
   return (
     <>
-        <h1 className="text-4xl font-black">Projects</h1>
+        <h1 className="text-4xl font-bold">Projects</h1>
 
         <div>
           

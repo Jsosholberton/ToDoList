@@ -8,9 +8,9 @@ const Header = () => {
             <div className="md:flex md:justify-between items-center">
                 <h2 className="text-5xl text-center font-black">
                     <span className="text-black">GOT</span>
-                    <span className="text-red-500">2</span>
+                    <span className="text-red-600">2</span>
                     <span className="text-black">D</span>
-                    <span className="text-red-500">O</span>
+                    <span className="text-red-600">O</span>
                 </h2>
 
                 <input

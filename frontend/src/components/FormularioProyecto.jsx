@@ -71,7 +71,7 @@ const FormularioProyecto = () => {
                 type='submit'
                 value='Create Proyect'
                 className='bg-black w-full p-3 uppercase font-bold text-white
-                rounded cursor-pointer hover:bg-gray-500 transition-colors'
+                rounded cursor-pointer hover:bg-red-600 transition-colors'
             />
 
         </form>

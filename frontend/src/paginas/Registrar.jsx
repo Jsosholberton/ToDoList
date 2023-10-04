@@ -57,7 +57,9 @@ import axios from 'axios'
 
   return (
     <>
-          <h1 className="text-sky-600 font-black text-6xl capitalize">Create your account and Manage your {''}  <span className="text-slate-700">Project</span>
+          <h1 className="text-red-600 font-black text-6xl capitalize">Create  {''}  <span className="text-gray-900">your account and Manage your</span>
+          <span className='text-red-600'> Project</span>
+          <span className="text-3xl text-black">.</span>
           </h1>
 
         { msg && <Alerta alerta={alerta} /> }
@@ -132,8 +134,8 @@ import axios from 'axios'
             <input 
               type="submit"
               value="Create Account"
-              className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold
-              rounded hover:cursor-pointer hover:bg-sky-800 transition colors"
+              className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold
+              rounded hover:cursor-pointer hover:bg-gray-500 transition colors"
             />
 
        </form>

@@ -40,10 +40,11 @@ const Login = () => {
 
   return (
     <>
-      <h1 className="text-sky-600 font-black text-6xl capitalize">
+      <h1 className="text-gray-800 font-black text-6xl capitalize">
         {" "}
-        Control yours Projects & Define Your {""}{" "}
-        <span className="text-slate-700">Future</span>
+        Control yours Projects & {""}{" "}
+        <span className="text-red-600">Define Your Future</span>
+        <span className="text-3xl">.</span>
       </h1>
 
       {msg && <Alerta alerta={alerta} />}
@@ -87,8 +88,8 @@ const Login = () => {
         <input
           type="submit"
           value="Login"
-          className="bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold
-              rounded hover:cursor-pointer hover:bg-sky-800 transition colors"
+          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold
+              rounded hover:cursor-pointer hover:bg-gray-500 transition colors"
         />
       </form>
 
