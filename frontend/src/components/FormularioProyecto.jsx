@@ -11,7 +11,7 @@ const FormularioProyecto = () => {
         <form className='bg-white py-10 px-5 md:w-1/2 rounded-lg'>
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow'
+                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='name'
                 >Project Name</label>
                 <input
@@ -26,7 +26,7 @@ const FormularioProyecto = () => {
 
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow'
+                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='Description'
                 >Description</label>
                 <textarea
@@ -39,7 +39,7 @@ const FormularioProyecto = () => {
             </div>
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow'
+                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='deadLine'
                 >DeadLine</label>
                 <input
@@ -54,7 +54,7 @@ const FormularioProyecto = () => {
 
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow'
+                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='client'
                 >Client Name</label>
                 <input
