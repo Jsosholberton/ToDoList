@@ -44,17 +44,12 @@ const Login = () => {
   return (
     <div className="page-container">
       <div className="corner-text">
-        <h2 className="text-5xl text-center font-black">
-          <span className="text-black">GOT</span>
-          <span className="text-red-600">2</span>
-          <span className="text-black">D</span>
-          <span className="text-red-600">O</span>
+        <h2 className="text-5xl text-center font-black">GOT<span className="text-red-600">2</span>D<span className="text-red-600">O</span>
         </h2>
       </div>
       <h1 className="text-gray-800 font-black text-6xl capitalize">
         Control yours Projects &&nbsp;
-        <span className="text-red-600">Define Your Future</span>
-        <span className="text-3xl">.</span>
+        <span className="text-red-600">Define Your Future</span>.
       </h1>
 
       {msg && <Alerta alerta={alerta} />}

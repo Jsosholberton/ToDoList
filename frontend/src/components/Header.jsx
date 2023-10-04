@@ -11,7 +11,7 @@ const Header = () => {
         cerrarSesionProyectos()
         cerrarSesionAuth()
         localStorage.removeItem('token')
-        console.log(err)
+        // console.log(err)
     }
 
     return (
@@ -19,12 +19,7 @@ const Header = () => {
 
         <header className="px-4 py-5 bg-white border-b">
             <div className="md:flex md:justify-between items-center">
-                <h2 className="text-5xl text-center font-black">
-                    <span className="text-black">GOT</span>
-                    <span className="text-red-600">2</span>
-                    <span className="text-black">D</span>
-                    <span className="text-red-600">O</span>
-                </h2>
+                <h2 className="text-5xl text-center font-black">GOT<span className="text-red-600">2</span>D<span className="text-red-600">O</span></h2>
 
                 <input
                     type="search"
