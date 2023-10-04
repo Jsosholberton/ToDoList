@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link } from "react-router-dom"
 import Alerta from '../components/Alerta'
 import axios from 'axios'
+import { useEffect } from "react";
+
 
 const Olvidepassword = () => {
   const [email, setEmail] = useState('')
@@ -35,13 +37,18 @@ const Olvidepassword = () => {
 
   const { msg } = alerta
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <h1 className="text-gray-900 font-black text-6xl capitalize">Restore Your password And Not
-        {''}<span className="text-red-600">Lose</span>
+        {''}<span className="text-red-600"> Lose</span>
         <span className="text-gray-900"> Your</span>
         <span className="text-red-600"> Projects</span>
       </h1>
+      
       {msg && <Alerta alerta={alerta} />}
 
       <form className="my-10 bg-white shadow rounded-lg p-10 "

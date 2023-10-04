@@ -4,12 +4,15 @@ import Alerta from "../components/Alerta"
 import axios from 'axios'
 import useAuth from "../hooks/useAuth"
 
+
+
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [alerta, setAlerta] = useState({})
 
-  const  { setAuth } = useAuth();
+  const { setAuth } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +31,7 @@ const Login = () => {
 
       localStorage.setItem('token', data.token)
       setAuth(data)
+      navigate('/proyectos');
     } catch (error) {
       setAlerta({
         msg: error.response.data.msg,
@@ -40,6 +44,7 @@ const Login = () => {
 
   return (
     <>
+      <div className="page-container"></div>
       <h1 className="text-gray-800 font-black text-6xl capitalize">
         {" "}
         Control yours Projects & {""}{" "}

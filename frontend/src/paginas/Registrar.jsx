@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from "react-router-dom"
 import Alerta from '../components/Alerta'
 import axios from 'axios'
+import { useEffect } from "react";
 
   const Registrar = () => {
   const [ name, setName ] = useState ('')
@@ -54,6 +55,10 @@ import axios from 'axios'
   }
 
   const { msg } = alerta
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
