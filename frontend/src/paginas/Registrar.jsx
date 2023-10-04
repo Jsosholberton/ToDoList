@@ -72,7 +72,8 @@ const Registrar = () => {
         </h2>
       </div>
       <h1 className="text-red-600 font-black text-6xl capitalize">
-        Create your account and Manage your <span className='text-gray-900'>Project</span>
+        Create <span className='text-gray-900'>your account and Manage your</span>
+        <span className='text-red-600'> Project</span>
         <span className="text-3xl text-black">.</span>
       </h1>
 
