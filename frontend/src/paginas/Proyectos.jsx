@@ -13,7 +13,7 @@ const Proyectos = () => {
     <>
       <h1 className="text-4xl font-bold">Projects</h1>
 
-      <div className="bg-white shadow mt-10 rounded-lg">
+      <div className="bg-white mt-10 shadow-lg shadow-gray-400 rounded-xl">
         {proyectos.length ?  
         proyectos.map(proyecto => (
           <PreviewProyecto 

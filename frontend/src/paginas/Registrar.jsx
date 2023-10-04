@@ -94,7 +94,7 @@ const Registrar = () => {
             id="nombre"
             type="text"
             placeholder="Your Name"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -111,7 +111,7 @@ const Registrar = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -128,7 +128,7 @@ const Registrar = () => {
             id="PASSWORD"
             type="password"
             placeholder="Password"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -145,7 +145,7 @@ const Registrar = () => {
             id="PASSWORD2"
             type="password"
             placeholder="Repeat Password"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 shadow-xl border shadow-lg shadow-gray-400 bg bg-gray-50"
             value={repeatpassword}
             onChange={(e) => setRepeatpassword(e.target.value)}
           />
@@ -153,7 +153,7 @@ const Registrar = () => {
 
         <button
           type="submit"
-          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:bg-gray-500 transition colors"
+          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 shadow-lg shadow-sky-400/50 transition colors"
         >
           Create Account
         </button>

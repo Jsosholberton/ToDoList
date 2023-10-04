@@ -73,7 +73,7 @@ const Olvidepassword = () => {
             id="email"
             type="email"
             placeholder="Put your Email"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -82,7 +82,7 @@ const Olvidepassword = () => {
         <button
           type="submit"
           value="Recover Access"
-          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:bg-gray-500 transition colors"
+          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 shadow-lg shadow-sky-400/50 transition colors"
         >
           Recover Access
         </button>
