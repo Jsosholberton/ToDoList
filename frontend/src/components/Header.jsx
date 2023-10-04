@@ -6,7 +6,7 @@ const Header = () => {
             <div className="md:flex md:justify-between">
                 <h2 className="text-4xl text-sky-600 font-black
                 text-center">
-                    ToDoList
+                    GOT2DO
                 </h2>
 
                 <input
