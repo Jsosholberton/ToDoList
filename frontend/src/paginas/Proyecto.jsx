@@ -16,10 +16,12 @@ const Proyecto = () => {
 
   return (
     cargando ? (
+  
     <div className="flex justify-center items-center h-screen">
         <div className="animate-spin rounded-full border-t-4 border-black-500 border-solid h-16 w-16"></div>
     </div>
   ) : (
+    <>
     <div className='flex justify-between'>
         <h1 className='font-black text-4xl'>{name}</h1>
 
@@ -33,6 +35,12 @@ const Proyecto = () => {
             </Link>
         </div>
     </div>
+      <button
+        type='button'
+        className='text-sm p-5 py-3 w-full md:w-auto rounded-lg uppercase font-bold
+        bg-sky-400 text-white text-center'
+        > new task</button>
+  </>
     )
   )
 }
