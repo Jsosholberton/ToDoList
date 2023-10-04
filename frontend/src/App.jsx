@@ -26,7 +26,7 @@ function App() {
 
             <Route path="/proyectos" element={<RutaProtegida />}>
               <Route index element={<Proyectos />} />
-            </Route>
+            </Route>x|
           </Routes>
         </AuthProvider>
       </BrowserRouter>

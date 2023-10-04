@@ -4,7 +4,6 @@ import Alerta from "../components/Alerta"
 import axios from 'axios'
 import useAuth from "../hooks/useAuth"
 
-
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
