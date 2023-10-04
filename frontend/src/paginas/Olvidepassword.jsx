@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import { Link } from "react-router-dom"
-import Alerta from '../components/Alerta'
-import axios from 'axios'
-import { useEffect } from "react";
-
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import Alerta from '../components/Alerta';
+import axios from 'axios';
 
 const Olvidepassword = () => {
-  const [email, setEmail] = useState('')
-  const [alerta, setAlerta] = useState({})
+  const [email, setEmail] = useState('');
+  const [alerta, setAlerta] = useState({});
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (email === '' || email.length < 6) {
@@ -17,7 +15,7 @@ const Olvidepassword = () => {
         msg: "Email is required",
         error: true
       });
-      return
+      return;
     }
 
     try {
@@ -42,60 +40,70 @@ const Olvidepassword = () => {
   }, []);
 
   return (
-    <>
+    <div className="page-container">
+      <div className="corner-text">
+        <h2 className="text-5xl text-center font-black">
+          <span className="text-black">GOT</span>
+          <span className="text-red-600">2</span>
+          <span className="text-black">D</span>
+          <span className="text-red-600">O</span>
+        </h2>
+      </div>
       <h1 className="text-gray-900 font-black text-6xl capitalize">Restore Your password And Not
-        {''}<span className="text-red-600"> Lose</span>
+        <span className="text-red-600"> Lose</span>
         <span className="text-gray-900"> Your</span>
         <span className="text-red-600"> Projects</span>
       </h1>
-      
+
       {msg && <Alerta alerta={alerta} />}
 
-      <form className="my-10 bg-white shadow rounded-lg p-10 "
+      <form
+        className="my-10 bg-white shadow rounded-lg p-10"
         onSubmit={handleSubmit}
       >
-
         <div className="my-5">
           <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="email"
-          >Email</label>
+          >
+            Email
+          </label>
           <input
             id="email"
             type="email"
             placeholder="Put your Email"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
             value={email}
-            onChange={e => setEmail(e.target.value)}
-
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
-        <input
+        <button
           type="submit"
           value="Recover Access"
-          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold
-        rounded hover:cursor-pointer hover:bg-gray-500 transition colors"
-        />
-
+          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:bg-gray-500 transition colors"
+        >
+          Recover Access
+        </button>
       </form>
 
       <nav className="lg:flex lg:justify-between">
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/"
-        >You Have a account? Sign In   </Link>
+        >
+          You Have an account? Sign In
+        </Link>
 
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/registrar"
-        >Do you dont have a account? Sign up </Link>
-
-
-
+        >
+          Don't have an account? Sign up
+        </Link>
       </nav>
-    </>
-  )
+    </div>
+  );
 }
 
-export default Olvidepassword
+export default Olvidepassword;

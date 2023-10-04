@@ -1,166 +1,180 @@
-import { useState } from 'react'
-import { Link } from "react-router-dom"
-import Alerta from '../components/Alerta'
-import axios from 'axios'
-import { useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import Alerta from '../components/Alerta';
+import axios from 'axios';
 
-  const Registrar = () => {
-  const [ name, setName ] = useState ('')
-  const [ email, setEmail ] = useState ('')
-  const [ password, setPassword ] = useState ('')
-  const [ repeatpassword, setRapeatpassword ] = useState ('')
-  const [ alerta, setAlerta ] = useState({})
-  
-  
-  const handlesubmit = async e => {
+const Registrar = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [repeatpassword, setRepeatpassword] = useState('');
+  const [alerta, setAlerta] = useState({});
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if([name, email, password, repeatpassword].includes('')) {
+    if ([name, email, password, repeatpassword].includes('')) {
       setAlerta({
-          msg: 'All fields are required',
-          error: true
-      })
-      return
+        msg: 'All fields are required',
+        error: true,
+      });
+      return;
     }
 
-    if(password !== repeatpassword) {
+    if (password !== repeatpassword) {
       setAlerta({
-        msg: 'The password must the be same',
-        error: true
-    })
-    return
+        msg: 'The password must be the same',
+        error: true,
+      });
+      return;
     }
-    if(password.length < 8) {
+
+    if (password.length < 8) {
       setAlerta({
-        msg: 'The password must the be greater than 8 characters',
-        error: true
-    })
-    return
+        msg: 'The password must be greater than 8 characters',
+        error: true,
+      });
+      return;
     }
-    
-    setAlerta({})
+
+    setAlerta({});
 
     try {
-      const { data } = await axios.post('http://localhost:4000/api/users',{
-        name, email, password })
-        setAlerta({
-          msg: data.msg,
-          error: false
-      })
+      const { data } = await axios.post('http://localhost:4000/api/users', {
+        name, email, password
+      });
+
+      setAlerta({
+        msg: data.msg,
+        error: false,
+      });
     } catch (error) {
       setAlerta({
         msg: error.response.data.msg,
-        error: true
-    })
+        error: true,
+      });
     }
   }
 
-  const { msg } = alerta
+  const { msg } = alerta;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <>
-          <h1 className="text-red-600 font-black text-6xl capitalize">Create  {''}  <span className="text-gray-900">your account and Manage your</span>
-          <span className='text-red-600'> Project</span>
-          <span className="text-3xl text-black">.</span>
-          </h1>
+    <div className="page-container">
+      <div className="corner-text">
+        <h2 className="text-5xl text-center font-black">
+          <span className="text-black">GOT</span>
+          <span className="text-red-600">2</span>
+          <span className="text-black">D</span>
+          <span className="text-red-600">O</span>
+        </h2>
+      </div>
+      <h1 className="text-red-600 font-black text-6xl capitalize">
+        Create your account and Manage your <span className='text-gray-900'>Project</span>
+        <span className="text-3xl text-black">.</span>
+      </h1>
 
-        { msg && <Alerta alerta={alerta} /> }
+      {msg && <Alerta alerta={alerta} />}
 
-       <form
-       
-        className="my-10 bg-white shadow rounded-lg p-10 "
-        onSubmit={handlesubmit}
-        >
-       <div className="my-5">
-            <label 
+      <form
+        className="my-10 bg-white shadow rounded-lg p-10"
+        onSubmit={handleSubmit}
+      >
+        <div className="my-5">
+          <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="nombre"
-            >Name</label>
-            <input
-              id="nombre" 
-              type="text"
-              placeholder="Your Name"
-              className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
-              value={name}
-              onChange={e => setName(e.target.value)}
-            
-            />
-          </div>
+          >
+            Name
+          </label>
+          <input
+            id="nombre"
+            type="text"
+            placeholder="Your Name"
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
 
-          <div className="my-5">
-            <label 
+        <div className="my-5">
+          <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="email"
-            >Email</label>
-            <input
-              id="email" 
-              type="email"
-              placeholder="Email"
-              className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-            
-            />
-          </div>
-         
-          <div className="my-5">
-            <label 
+          >
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="my-5">
+          <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password"
-            >Password</label>
-            <input
-              id="PASSWORD" 
-              type="password"
-              placeholder="Password"
-              className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-            
-            />
-          </div>
-          <div className="my-5">
-            <label 
+          >
+            Password
+          </label>
+          <input
+            id="PASSWORD"
+            type="password"
+            placeholder="Password"
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <div className="my-5">
+          <label
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password2"
-            >Repeat Password</label>
-            <input
-              id="PASSWORD2" 
-              type="password"
-              placeholder="Repeat Password"
-              className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
-              value={repeatpassword}
-              onChange={e => setRapeatpassword(e.target.value)}
-            
-            />
-          </div>
-            <input 
-              type="submit"
-              value="Create Account"
-              className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold
-              rounded hover:cursor-pointer hover:bg-gray-500 transition colors"
-            />
+          >
+            Repeat Password
+          </label>
+          <input
+            id="PASSWORD2"
+            type="password"
+            placeholder="Repeat Password"
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
+            value={repeatpassword}
+            onChange={(e) => setRepeatpassword(e.target.value)}
+          />
+        </div>
 
-       </form>
+        <button
+          type="submit"
+          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:bg-gray-500 transition colors"
+        >
+          Create Account
+        </button>
+      </form>
 
-       <nav className="lg:flex lg:justify-between">
-          <Link
+      <nav className="lg:flex lg:justify-between">
+        <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/"
-          >You Have a account? Sign In </Link>
+        >
+          You Have an account? Sign In
+        </Link>
 
-          <Link
+        <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/olvidepassword"
-          >Forget My Password</Link>
-
-          
-
-       </nav>
-    </>
-  )
+        >
+          Forgot My Password
+        </Link>
+      </nav>
+    </div>
+  );
 }
 
-export default Registrar
+export default Registrar;

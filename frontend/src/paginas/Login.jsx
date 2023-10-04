@@ -1,15 +1,14 @@
-import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import Alerta from "../components/Alerta"
-import axios from 'axios'
-import useAuth from "../hooks/useAuth"
-
-
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Alerta from "../components/Alerta";
+import axios from 'axios';
+import useAuth from "../hooks/useAuth";
+import "./base.css";
 
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [alerta, setAlerta] = useState({})
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [alerta, setAlerta] = useState({});
 
   const { setAuth } = useAuth();
   const navigate = useNavigate();
@@ -40,14 +39,20 @@ const Login = () => {
     }
   };
 
-  const { msg } = alerta
+  const { msg } = alerta;
 
   return (
-    <>
-      <div className="page-container"></div>
+    <div className="page-container">
+      <div className="corner-text">
+        <h2 className="text-5xl text-center font-black">
+          <span className="text-black">GOT</span>
+          <span className="text-red-600">2</span>
+          <span className="text-black">D</span>
+          <span className="text-red-600">O</span>
+        </h2>
+      </div>
       <h1 className="text-gray-800 font-black text-6xl capitalize">
-        {" "}
-        Control yours Projects & {""}{" "}
+        Control your Projects &nbsp;
         <span className="text-red-600">Define Your Future</span>
         <span className="text-3xl">.</span>
       </h1>
@@ -55,7 +60,7 @@ const Login = () => {
       {msg && <Alerta alerta={alerta} />}
 
       <form
-        className="my-10 bg-white shadow rounded-lg p-10 "
+        className="my-10 bg-white shadow rounded-lg p-10"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
@@ -69,7 +74,7 @@ const Login = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -84,36 +89,36 @@ const Login = () => {
           <input
             id="PASSWORD"
             type="password"
-            placeholder="Password "
-            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50  "
+            placeholder="Password"
+            className="w-full mt-3 p-3 border rounded-xl bg bg-gray-50"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <input
+        <button
           type="submit"
-          value="Login"
-          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold
-              rounded hover:cursor-pointer hover:bg-gray-500 transition colors"
-        />
+          className="bg-gray-900 w-full py-3 text-white uppercase font-bold rounded hover:bg-gray-500 transition colors"
+        >
+          Login
+        </button>
       </form>
 
       <nav className="lg:flex lg:justify-between">
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
-          to="registrar"
+          to="/registrar" // Reemplaza con la ruta correcta
         >
-          Do you dont have a account? Sign up{" "}
+          Don't have an account? Sign up
         </Link>
 
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
-          to="olvidepassword"
+          to="/olvidepassword" // Reemplaza con la ruta correcta
         >
-          Forget My Password
+          Forgot your password?
         </Link>
       </nav>
-    </>
+    </div>
   );
 };
 
