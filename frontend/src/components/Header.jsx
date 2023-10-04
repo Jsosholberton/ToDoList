@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom"
+import useProyectos from "../hooks/useProyectos"
+import useAuth from "../hooks/useAuth"
 
 const Header = () => {
+
+    const { cerrarSesionProyectos } = useProyectos()
+    const { cerrarSesionAuth } = useAuth()
+
+    const handleCerrarSesion = () => {
+        cerrarSesionProyectos()
+        cerrarSesionAuth()
+        localStorage.removeItem('token')
+        console.log(err)
+    }
+
     return (
 
 
@@ -28,6 +41,7 @@ const Header = () => {
                         type="button"
                         className="text-white text-sm bg-black p-3
                         rounded-md uppercase font-bold cursor-pointer hover:bg-gray-500 transition-colors"
+                        onClick={handleCerrarSesion}
                     >Close Session</button>
                 </div>
 
