@@ -44,10 +44,10 @@ const Login = () => {
   return (
     <div className="page-container">
       <div className="corner-text">
-        <h2 className="text-5xl text-center font-black">GOT<span className="text-red-600">2</span>D<span className="text-red-600">O</span>
+        <h2 className="text-5xl italic text-center font-black">GOT<span className="text-red-600">2</span>D<span className="text-red-600">O</span>
         </h2>
       </div>
-      <h1 className="text-gray-800 font-black text-6xl capitalize">
+      <h1 className="text-gray-800 italic font-serif font-bold text-5xl capitalize">
         Control yours Projects &&nbsp;
         <span className="text-red-600">Define Your Future</span>.
       </h1>
@@ -55,12 +55,12 @@ const Login = () => {
       {msg && <Alerta alerta={alerta} />}
 
       <form
-        className="my-10 bg-white shadow rounded-lg p-10"
+        className="my-10 bg-white shadow-lg shadow-gray-500 rounded-lg p-10"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 block text-xl font-bold"
+            className="uppercase text-gray-600 italic block text-xl font-bold"
             htmlFor="email"
           >
             Email
@@ -69,14 +69,14 @@ const Login = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="w-full mt-3 p-3 shadow-lg shadow-gray-400 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 italic shadow-lg  shadow-gray-400 border rounded-xl bg bg-gray-50"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 block text-xl font-bold"
+            className="uppercase italic text-gray-600 block text-xl font-bold"
             htmlFor="password"
           >
             Password
@@ -85,14 +85,14 @@ const Login = () => {
             id="PASSWORD"
             type="password"
             placeholder="Password"
-            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
+            className="w-full mt-3 italic p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button
           type="submit"
-          className="bg-gray-900 w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition colors"
+          className="bg-gray-900 italic w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition colors"
         >
           Login
         </button>

@@ -11,9 +11,9 @@ const Proyectos = () => {
 
   return (
     <>
-      <h1 className="text-4xl font-bold">Projects</h1>
+      <h1 className="text-4xl italic font-serif font-bold text-4xl">Projects</h1>
 
-      <div className="bg-white mt-10 shadow-lg shadow-gray-400 rounded-xl">
+      <div className="bg-white mt-10 shadow-lg italic shadow-gray-400 rounded-xl">
         {proyectos.length ?  
         proyectos.map(proyecto => (
           <PreviewProyecto 
@@ -21,7 +21,7 @@ const Proyectos = () => {
           proyecto={proyecto}
           />
         ))
-        : <p className="mt-5 p-5 text-center text-gray-600 uppercase p-5">Not projects found</p>}
+        : <p className="mt-5 p-5 text-center font-sans font-medium text-lg text-gray-600 uppercase p-5">Not projects found</p>}
       </div>
     </>
   );

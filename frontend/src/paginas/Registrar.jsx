@@ -64,14 +64,14 @@ const Registrar = () => {
   return (
     <div className="page-container">
       <div className="corner-text">
-        <h2 className="text-5xl text-center font-black">
+        <h2 className="text-5xl italic text-center font-black">
           <span className="text-black">GOT</span>
           <span className="text-red-600">2</span>
           <span className="text-black">D</span>
           <span className="text-red-600">O</span>
         </h2>
       </div>
-      <h1 className="text-red-600 font-black text-6xl capitalize">
+      <h1 className="text-red-600 italic font-serif font-bold text-6xl capitalize">
         Create <span className='text-gray-900'>your account and Manage your</span>
         <span className='text-red-600'> Project</span>
         <span className="text-3xl text-black">.</span>
@@ -80,12 +80,12 @@ const Registrar = () => {
       {msg && <Alerta alerta={alerta} />}
 
       <form
-        className="my-10 bg-white shadow rounded-lg p-10"
+        className="my-10 bg-white shadow-lg shadow-gray-500f rounded-lg p-10"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 block text-xl font-bold"
+            className="uppercase text-gray-600 italic block text-xl font-bold"
             htmlFor="nombre"
           >
             Name
@@ -94,7 +94,7 @@ const Registrar = () => {
             id="nombre"
             type="text"
             placeholder="Your Name"
-            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl italic shadow-lg shadow-gray-400 bg bg-gray-50"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -102,7 +102,7 @@ const Registrar = () => {
 
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 block text-xl font-bold"
+            className="uppercase text-gray-600 italic block text-xl font-bold"
             htmlFor="email"
           >
             Email
@@ -111,7 +111,7 @@ const Registrar = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl italic shadow-lg shadow-gray-400 bg bg-gray-50"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -119,7 +119,7 @@ const Registrar = () => {
 
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 block text-xl font-bold"
+            className="uppercase text-gray-600 italic block text-xl font-bold"
             htmlFor="password"
           >
             Password
@@ -128,7 +128,7 @@ const Registrar = () => {
             id="PASSWORD"
             type="password"
             placeholder="Password"
-            className="w-full mt-3 p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
+            className="w-full mt-3 p-3 border rounded-xl italic shadow-lg shadow-gray-400 bg bg-gray-50"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -136,7 +136,7 @@ const Registrar = () => {
 
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 block text-xl font-bold"
+            className="uppercase text-gray-600 block italic text-xl font-bold"
             htmlFor="password2"
           >
             Repeat Password
@@ -145,7 +145,7 @@ const Registrar = () => {
             id="PASSWORD2"
             type="password"
             placeholder="Repeat Password"
-            className="w-full mt-3 p-3 shadow-xl border shadow-lg shadow-gray-400 bg bg-gray-50"
+            className="w-full mt-3 p-3 shadow-xl italic border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
             value={repeatpassword}
             onChange={(e) => setRepeatpassword(e.target.value)}
           />
@@ -153,7 +153,7 @@ const Registrar = () => {
 
         <button
           type="submit"
-          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition colors"
+          className="bg-gray-900 mb-5 w-full italic py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition colors"
         >
           Create Account
         </button>

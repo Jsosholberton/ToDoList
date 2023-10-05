@@ -49,21 +49,20 @@ const FormularioProyecto = () => {
 
     return (
         <form
-        className='bg-white py-10 px-5 md:w-1/2 rounded-lg'
+        className='bg-white py-10 shadow-lg shadow-gray-500 px-5 md:w-1/2 rounded-lg'
         onSubmit={handleSubmit}
         >
-
             {msg && <Alerta alerta={alerta}/>}
 
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
+                    className='text-gray-700 italic uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='name'
                 >Project Name</label>
                 <input
                     id='name'
                     type='text'
-                    className='border w-full p-2 placeholder-gray-400 rounded-md rounded-lg p-1 shadow-xl'
+                    className='border w-full p-2 italic placeholder-gray-400 rounded-md rounded-lg p-1 shadow-xl'
                     placeholder='Name of the Project'
                     value={name}
                     onChange={e => setName(e.target.value)}
@@ -72,12 +71,12 @@ const FormularioProyecto = () => {
 
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
+                    className='text-gray-700 uppercase italic font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='Description'
                 >Description</label>
                 <textarea
                     id='description'
-                    className='border w-full p-2 mt-2 placeholder-gray-400 rounded-md shadow-xl'
+                    className='border w-full p-2 mt-2 italic placeholder-gray-400 rounded-md shadow-xl'
                     placeholder='Description of the project'
                     value={description}
                     onChange={e => setDescription(e.target.value)}
@@ -85,13 +84,13 @@ const FormularioProyecto = () => {
             </div>
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
+                    className='text-gray-700 uppercase italic font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='deadLine'
                 >DeadLine</label>
                 <input
                     id='deadLine'
                     type='date'
-                    className='border w-full p-2 mt-2 placeholder-gray-400 rounded-md shadow-xl'
+                    className='border w-full p-2 mt-2 italic placeholder-gray-400 rounded-md shadow-xl'
                     placeholder='Description of the project'
                     value={deadLine}
                     onChange={e => setDeadLine(e.target.value)}
@@ -100,13 +99,13 @@ const FormularioProyecto = () => {
 
             <div className='mb-5'>
                 <label
-                    className='text-gray-700 uppercase font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
+                    className='text-gray-700 uppercase italic font-bold text-sm shadow rounded-lg p-1 bg-gray-200'
                     htmlFor='client'
                 >Client Name</label>
                 <input
                     id='client'
                     type='text'
-                    className='border w-full p-2 placeholder-gray-400 rounded-md shadow-xl'
+                    className='border w-full p-2 italic placeholder-gray-400 rounded-md shadow-xl'
                     placeholder='Name of the Client'
                     value={client}
                     onChange={e => setClient(e.target.value)}
@@ -116,7 +115,7 @@ const FormularioProyecto = () => {
             <input
                 type='submit'
                 value={id ? 'Update': 'Create'}
-                className='bg-black w-full p-3 uppercase font-bold text-white
+                className='bg-black w-full p-3 uppercase italic font-bold text-white
                 rounded-lg cursor-pointer shadow-lg shadow-rose-400 hover:bg-red-600 active:bg-rose-600 transition-colors'
             />
 
