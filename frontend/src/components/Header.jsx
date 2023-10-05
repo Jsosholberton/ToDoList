@@ -29,13 +29,13 @@ const Header = () => {
                 <div className="flex items-center gap-4">
                     <Link
                         to="/Proyectos"
-                        className="font-bold uppercase p-3 rounded-xl shadow-2xl cursor-pointer hover:bg-gray-300 shadow-lg shadow-gray-350 transition-colors"
+                        className="font-bold uppercase p-3 rounded-xl shadow-2xl cursor-pointer hover:bg-gray-300 active:bg-gray-400 shadow-lg shadow-gray-350 transition-colors"
                     >Projects</Link>
 
                     <button
                         type="button"
                         className="text-white text-sm bg-black p-3
-                        rounded-xl uppercase font-bold cursor-pointer hover:bg-teal-600 shadow-lg shadow-sky-400/50 transition-colors"
+                        rounded-xl uppercase font-bold cursor-pointer hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition-colors"
                         onClick={handleCerrarSesion}
                     >Close Session</button>
                 </div>

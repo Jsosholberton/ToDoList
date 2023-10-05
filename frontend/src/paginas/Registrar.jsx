@@ -153,7 +153,7 @@ const Registrar = () => {
 
         <button
           type="submit"
-          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 shadow-lg shadow-sky-400/50 transition colors"
+          className="bg-gray-900 mb-5 w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition colors"
         >
           Create Account
         </button>
