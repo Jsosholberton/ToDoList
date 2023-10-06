@@ -64,7 +64,7 @@ const Login = () => {
         hover:opacity-100 hover:scale-105 translate-x-4 skew-3 
         md:transform-none hover:-translate-y-2 
         hover:shadow-lg duration-700 
-        bg-gradient-to-r from-[#000000] via-[#000000] to-[#ffffff] 
+        bg-gradient-to-br from-[#000000] via-[#131212] to-[#ffffff] 
         shadow-xl shadow-black-950 rounded-3xl p-5"
         onSubmit={handleSubmit}
       >
@@ -115,14 +115,14 @@ const Login = () => {
 
       <nav className="lg:flex lg:justify-between">
         <Link
-          className="opacity-90 hover:opacity-100 shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full block duration-500 text-center hover:-translate-y-1 my-5 text-[#000000] uppercase text-sm"
+          className="opacity-90 hover:opacity-100 shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full block duration-500 text-center hover:-translate-y-1 my-5 text-[#ffffff] uppercase text-sm"
           to="/registrar" // Reemplaza con la ruta correcta
         >
           Don't have an account? Sign up
         </Link>
 
         <Link
-          className="opacity-90 hover:opacity-100 block duration-500 hover:-translate-y-1 text-center my-5 text-[#000000] shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full uppercase text-sm"
+          className="opacity-90 hover:opacity-100 block duration-500 hover:-translate-y-1 text-center my-5 text-[#ffffff] shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full uppercase text-sm"
           to="/olvidepassword" // Reemplaza con la ruta correcta
         >
           Forgot your password?
