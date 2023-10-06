@@ -45,20 +45,27 @@ const Login = () => {
     <div className="page-container scroll-mx-0">
       <div className="corner-text">
         <h2 className="opacity-100 text-5xl duration-500 hover:-translate-y-1 italic text-center font-black bg-clip-text text-transparent
-        bg-gradient-to-r from-[#ffffff] via-[#4d4c4c] to-[#ffffff]">GOT<span className="text-transparent bg-clip-text 
+        bg-gradient-to-r from-[#000000] via-[#000000] to-[#ffffff]">GOT<span className="text-transparent bg-clip-text 
         bg-gradient-to-r from-[#4b0000] via-[#920404] to-[red] ">2</span>D<span className="text-transparent drop-shadow-2xl shadow-[red] bg-clip-text 
         bg-gradient-to-r from-[#4b0000] via-[#850404] to-[red]">O</span>
         </h2>
       </div>
-      <h1 className="opacity-70 hover:opacity-100 hover:translate-x-4 duration-500 skew-3 bg-clip-text text-transparent
-        bg-gradient-to-r from-[#b4b3b3] from-10% via-[#fd989d] via-70% to-[#ffffff] italic font-black text-5xl capitalize">
+      <h1 className="opacity-80 hover:opacity-100 hover:translate-x-4 
+        duration-500 skew-3 bg-clip-text text-transparent
+        bg-gradient-to-r from-[#dfdfdf] from-10% via-[#ffffff] via-70% to-[#ffffff]
+        italic font-black text-5xl capitalize">
         Control yours Projects <br />& Define Your Future.
       </h1>
 
       {msg && <Alerta alerta={alerta} />}
 
       <form
-        className="my-10 opacity-75 shadow hover:shadow-[#ff002b] hover:opacity-100 hover:scale-105 translate-x-4 skew-3 md:transform-none rounded-b-none hover:-translate-y-2 hover:shadow-md duration-700 bg-gradient-to-r from-[#000000] via-[#202020] to-[#640000] shadow-xl shadow-[#000000] rounded-3xl p-10"
+        className="my-10 opacity-75 shadow hover:shadow-[#ff002b] 
+        hover:opacity-100 hover:scale-105 translate-x-4 skew-3 
+        md:transform-none rounded-b-none hover:-translate-y-2 
+        hover:shadow-lg duration-700 
+        bg-gradient-to-r from-[#000000] via-[#000000] to-[#ffffff] 
+        shadow-xl shadow-[#ffffff] rounded-3xl p-10"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
@@ -100,7 +107,7 @@ const Login = () => {
           className=" 
           transition-transform opacity-70 hover:opacity-100 rounded-l-none  transform hover:-translate-y-2 hover:duration-500 bg-gradient-to-r from-[#ffffff] via-[#525252] to-[#640000] italic w-full py-3 
           text-white uppercase font-semibold font-black rounded-xl text-white
-          active:translate-x-64 active:duration-300 shadow-md shadow-[#ff0037] transition colors"
+          active:translate-x-64 active:duration-300 shadow-md hover:shadow-[#ff0037] transition colors"
         >
           Login
         </button>
