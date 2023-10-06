@@ -34,7 +34,7 @@ const Header = () => {
 
                     <button
                         type="button"
-                        className="text-white text-sm bg-black p-3
+                        className="text-white text-sm bg-black-950 p-3
                         rounded-xl uppercase font-sans font-medium  italic cursor-pointer hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition-colors"
                         onClick={handleCerrarSesion}
                     >Close Session</button>

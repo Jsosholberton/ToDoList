@@ -115,7 +115,7 @@ const FormularioProyecto = () => {
             <input
                 type='submit'
                 value={id ? 'Update': 'Create'}
-                className='bg-black w-full p-3 uppercase italic font-bold text-white
+                className='bg-black-950 w-full p-3 uppercase italic font-bold text-white
                 rounded-lg cursor-pointer shadow-lg shadow-rose-400 hover:bg-red-600 active:bg-rose-600 transition-colors'
             />
 
