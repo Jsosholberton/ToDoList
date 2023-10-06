@@ -44,23 +44,26 @@ const Login = () => {
   return (
     <div className="page-container">
       <div className="corner-text">
-        <h2 className="text-5xl italic text-center font-black">GOT<span className="text-red-600">2</span>D<span className="text-red-600">O</span>
+        <h2 className="text-5xl duration-500 hover:-translate-y-1 italic text-center font-black bg-clip-text text-transparent
+        bg-gradient-to-l from-[#ffffff] via-[#838282] to-[#000000]">GOT<span className="text-transparent bg-clip-text 
+        bg-gradient-to-r from-[#4b0000] via-[#920404] to-[red] ">2</span>D<span className="text-transparent drop-shadow-2xl shadow-[red] bg-clip-text 
+        bg-gradient-to-r from-[#4b0000] via-[#850404] to-[red]">O</span>
         </h2>
       </div>
-      <h1 className="text-gray-800 italic font-serif font-bold text-5xl capitalize">
-        Control yours Projects &&nbsp;
-        <span className="text-red-600">Define Your Future</span>.
+      <h1 className="bg-clip-text text-transparent m-9 h-28
+        bg-gradient-to-r from-[#ffffff] via-[#e49aae] to-[#ff0015] italic font-black text-5xl capitalize">
+        Control yours Projects <br />& Define Your Future.
       </h1>
 
       {msg && <Alerta alerta={alerta} />}
 
       <form
-        className="my-10 bg-white shadow-lg shadow-gray-500 rounded-lg p-10"
+        className="my-10 rounded-b-none hover:-translate-y-3 duration-500 bg-gradient-to-r from-[#000000] via-[#202020] to-[#640000] shadow-2xl shadow-[#000000] rounded-3xl p-10"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
           <label
-            className="uppercase text-gray-600 italic block text-xl font-bold"
+            className="uppercase text-[#d8d6d6] italic block text-xl font-bold"
             htmlFor="email"
           >
             Email
@@ -69,14 +72,15 @@ const Login = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="w-full mt-3 p-3 italic shadow-lg  shadow-gray-400 border rounded-xl bg bg-gray-50"
+            className="w-full mt-3 p-3 rounded-l-none hover:-translate-y-0.5 duration-700 shadow-inner italic shadow shadow-[#000000] rounded-xl 
+            bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="my-5">
           <label
-            className="uppercase italic text-gray-600 block text-xl font-bold"
+            className="uppercase italic text-[#d8d6d6] block text-xl font-bold"
             htmlFor="password"
           >
             Password
@@ -85,14 +89,18 @@ const Login = () => {
             id="PASSWORD"
             type="password"
             placeholder="Password"
-            className="w-full mt-3 italic p-3 border rounded-xl shadow-lg shadow-gray-400 bg bg-gray-50"
+            className="w-full mt-3 rounded-l-none p-3 hover:-translate-y-0.5 duration-700 shadow-inner italic shadow shadow-[#000000] rounded-xl 
+            bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button
           type="submit"
-          className="bg-gray-900 italic w-full py-3 text-white uppercase font-bold rounded-xl hover:bg-teal-600 active:bg-cyan-500 shadow-lg shadow-sky-400/50 transition colors"
+          className=" 
+          transition-transform rounded-l-none  transform hover:-translate-y-2 hover:duration-500 bg-gradient-to-r from-[#ffffff] via-[#525252] to-[#640000] italic w-full py-3 
+          text-white uppercase font-semibold font-black rounded-xl text-white
+          active:translate-x-64 active:duration-300 shadow-md shadow-[#ff0037] transition colors"
         >
           Login
         </button>
@@ -100,14 +108,14 @@ const Login = () => {
 
       <nav className="lg:flex lg:justify-between">
         <Link
-          className="block text-center my-5 text-slate-500 uppercase text-sm"
+          className="block duration-500 text-center hover:-translate-y-1 my-5 text-[white] uppercase text-sm"
           to="/registrar" // Reemplaza con la ruta correcta
         >
           Don't have an account? Sign up
         </Link>
 
         <Link
-          className="block text-center my-5 text-slate-500 uppercase text-sm"
+          className="block duration-500 hover:-translate-y-1 text-center my-5 text-[white]  uppercase text-sm"
           to="/olvidepassword" // Reemplaza con la ruta correcta
         >
           Forgot your password?
