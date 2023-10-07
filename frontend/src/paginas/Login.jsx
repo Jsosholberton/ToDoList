@@ -63,9 +63,10 @@ const Login = () => {
       {/* Título principal */}
       <h1 className="opacity-80 hover:opacity-100 hover:scale-105 hover:translate-x-4 
         duration-1000 skew-3 bg-clip-text text-transparent 
-        bg-gradient-to-r from-[#ffffff] via-[#aaaaaa] to-[#ffffff] hover:from-[#a8a8a8] hover:from-30% hover:via-[#ffffff] hover:duration-500 hover:to-[#ffffff]
+        bg-gradient-to-br from-[#ffffff] via-[#aaaaaa] to-[#ffffff] hover:from-[#a8a8a8] hover:from-30% hover:via-[#ff1515] hover:duration-500 hover:to-[#ff0000]
         italic font-Bentham font-bold skew-x-1 text-5xl p-2 h-60 capitalize">
-        Control yours Projects <br />& Define Your Future.
+        Control yours Projects <br />& Define Your Future
+        <span className="text-[#dd2121] text-4xl ">.</span>
       </h1>
 
       {/* Renderiza la alerta si existe */}
@@ -76,13 +77,13 @@ const Login = () => {
         hover:opacity-100 hover:scale-105 translate-x-4 skew-x-1 
         md:transform-none hover:-translate-y-2 
         hover:shadow-lg duration-700 
-        bg-gradient-to-br from-[#000000] via-[#131212] to-[#ffffff] 
+        bg-gradient-to-br from-[#000000] from-1% via-[#131212] via-50% to-[#ffffff]
         shadow-xl shadow-black-950 rounded-3xl m- p-5"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
           <label
-            className="uppercase text-[#d8d6d6] italic block text-xl font-bold"
+            className="uppercase text-[#d8d6d6] font-thin italic block text-xl font-bold"
             htmlFor="email"
           >
             Email
@@ -92,15 +93,17 @@ const Login = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="w-full opacity-80 hover:opacity-100 mt-3 p-3 rounded-l-none hover:-translate-y-1 duration-700 shadow-inner italic shadow shadow-[#000000] rounded-xl 
-            bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder"
+            className="hover:translate-x-1  hover:duration-700 opacity-80 hover:opacity-100 mt-3 p-3 rounded-l-none hover:-translate-y-1 duration-700 shadow-inner italic shadow shadow-[#000000] rounded-xl 
+              bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder
+              w-2/3 focus:w-96"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
         </div>
         <div className="my-5">
           <label
-            className="uppercase italic text-[#d8d6d6] block text-xl font-bold"
+            className="uppercase italic font-thin text-[#d8d6d6] block text-xl font-bold"
             htmlFor="password"
           >
             Password
@@ -110,7 +113,7 @@ const Login = () => {
             id="PASSWORD"
             type="password"
             placeholder="Password"
-            className="w-full opacity-80 hover:opacity-100 mt-3 rounded-l-none p-3 hover:-translate-y-1 duration-700 shadow-inner italic shadow-[#000000] rounded-xl 
+            className="w-2/3 focus:w-96 hover:translate-x-1 opacity-80 hover:opacity-100 mt-3 rounded-l-none p-3 hover:-translate-y-1 duration-700 shadow-inner italic shadow-[#000000] rounded-xl 
             bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -121,8 +124,8 @@ const Login = () => {
           type="submit"
           className=" 
           transition-transform opacity-70 hover:opacity-100 rounded-l-none  transform hover:-translate-y-2 hover:duration-500 bg-gradient-to-r from-[#ffffff] via-[#3d3d3d] to-[#000000] hover:to-[#ff0022] italic w-full py-3 
-          text-white uppercase font-Sofia font-black rounded-xl text-white
-          active:translate-x-56 active:duration-300 shadow-md hover:shadow-[#ff0037] transition colors"
+          text-white uppercase font-medium rounded-xl text-white
+          active:animate-ping pointer-events-auto shadow-md hover:shadow-[#ff0037] transition-colors font-thin duration-1000"
         >
           Login
         </button>
