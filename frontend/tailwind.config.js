@@ -5,6 +5,10 @@ export default {
       "Sofia": ['Sofia Sans Condensed', "sans-serif"],
     },
     extend: {
+      boxShadow: {
+        custom: '0 0 20px rose-400, 0 0 20px fuchsia-500, 0 0 20px indigo-500',
+      },  
+
       colors: {
         'black': {
           '50': '#f6f6f6',

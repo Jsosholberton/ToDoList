@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Alerta from "../components/Alerta";
 import axios from 'axios';
 import useAuth from "../hooks/useAuth";
-import "./base.css";
+
 
 const Login = () => {
   // Definición de estados locales para email, password y alertas
@@ -51,20 +51,19 @@ const Login = () => {
   const { msg } = alerta;
 
   return (
-    <div className="page-container scroll-mx-0">
-      <div className="corner-text">
-        {/* Título de la aplicación */}
-        <h2 className="opacity-90 hover:opacity-100 text-5xl duration-500 hover:-translate-y-1 italic text-center font-black bg-clip-text text-transparent
+    <div className="page-container">
+      <div className="corner-text fixed top-0 left-0 p-5">
+        <h2 className="opacity-90 hover:opacity-100 text-5xl duration-500 p-5
+        hover:-translate-y-1 italic text-center font-black bg-clip-text text-transparent
         bg-gradient-to-r from-[#ffffff] via-[#d4d4d4] to-[#525252]">GOT<span className="text-transparent bg-clip-text 
-        bg-gradient-to-r from-[#4b0000] via-[#920404] to-[red] ">2</span>D<span className="text-transparent drop-shadow-2xl shadow-[red] bg-clip-text 
+        bg-gradient-to-r from-[#4b0000] via-[#920404] to-[red] ">2</span>D<span className="text-transparent drop-shadow-2xl shadow-[#f53232] bg-clip-text 
         bg-gradient-to-r from-[#4b0000] via-[#850404] to-[red]">O</span>
         </h2>
       </div>
-      {/* Título principal */}
-      <h1 className="opacity-80 hover:opacity-100 hover:scale-105 hover:translate-x-4 
-        duration-1000 skew-3 bg-clip-text text-transparent 
-        bg-gradient-to-br from-[#ffffff] via-[#aaaaaa] to-[#ffffff] hover:from-[#a8a8a8] hover:from-30% hover:via-[#ff1515] hover:duration-500 hover:to-[#ff0000]
-        italic font-Bentham font-bold skew-x-1 text-5xl p-2 h-60 capitalize">
+      <h1 className="opacity-80 hover:opacity-100 hover:scale-105 hover:translate-x-3
+        duration-1000 skew-3 bg-clip-text text-transparent hover:shadow-[#f30000]
+        bg-gradient-to-br from-[#d8d8d8] via-[#dbdbdb] to-[#474747] hover:from-[#ffffff] hover:from-30% hover:via-[#ce2929] hover:duration-500 hover:to-[#df9696]
+        italic font-bold text-[2.30rem] hover:duration-1000 capitalize h-40 p-1">
         Control yours Projects <br />& Define Your Future
         <span className="text-[#dd2121] text-4xl ">.</span>
       </h1>
@@ -73,12 +72,12 @@ const Login = () => {
       {msg && <Alerta alerta={alerta} />}
 
       <form
-        className="opacity-85 hover:shadow-[#ffffff] 
+        className="delay-100 opacity-80 custom-shadow
         hover:opacity-100 hover:scale-105 translate-x-4 skew-x-1 
         md:transform-none hover:-translate-y-2 
-        hover:shadow-lg duration-700 
+        hover:shadow-lg duration-700 hover:shadow-[#700000]
         bg-gradient-to-br from-[#000000] from-1% via-[#131212] via-50% to-[#ffffff]
-        shadow-xl shadow-black-950 rounded-3xl m- p-5"
+        rounded-3xl p-6"
         onSubmit={handleSubmit}
       >
         <div className="my-5">
@@ -93,9 +92,9 @@ const Login = () => {
             id="email"
             type="email"
             placeholder="Email"
-            className="hover:translate-x-1  hover:duration-700 opacity-80 hover:opacity-100 mt-3 p-3 rounded-l-none hover:-translate-y-1 duration-700 shadow-inner italic shadow shadow-[#000000] rounded-xl 
+            className="hover:translate-x-1  hover:duration-700 opacity-80 hover:opacity-100 mt-1 p-2 rounded-l-none hover:-translate-y-1 duration-700 shadow-inner italic shadow shadow-[#000000] rounded-xl 
               bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder
-              w-2/3 focus:w-96"
+              w-80 focus:w-96"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -113,7 +112,7 @@ const Login = () => {
             id="PASSWORD"
             type="password"
             placeholder="Password"
-            className="w-2/3 focus:w-96 hover:translate-x-1 opacity-80 hover:opacity-100 mt-3 rounded-l-none p-3 hover:-translate-y-1 duration-700 shadow-inner italic shadow-[#000000] rounded-xl 
+            className="w-80 focus:w-96  hover:translate-x-1 opacity-80 hover:opacity-100 mt-3 rounded-l-none p-2 hover:-translate-y-1 duration-700 shadow-inner italic shadow-[#000000] rounded-xl 
             bg-gradient-to-r from-[white] via-[#acabab] to-[#ffffff] custom-placeholder"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -123,9 +122,11 @@ const Login = () => {
         <button
           type="submit"
           className=" 
-          transition-transform opacity-70 hover:opacity-100 rounded-l-none  transform hover:-translate-y-2 hover:duration-500 bg-gradient-to-r from-[#ffffff] via-[#3d3d3d] to-[#000000] hover:to-[#ff0022] italic w-full py-3 
-          text-white uppercase font-medium rounded-xl text-white
-          active:animate-ping pointer-events-auto shadow-md hover:shadow-[#ff0037] transition-colors font-thin duration-1000"
+          transition-shadow opacity-70 hover:opacity-100 rounded-full
+          hover:-translate-y-2 hover:duration-500 bg-gradient-to-r from-[#ffffff] via-[#3d3d3d] to-[#000000] hover:to-[#c40c0c]
+          italic w-full py-2
+          text-white uppercase delay-75 font-medium rounded-3xl text-white shadow-inner
+          active:animate-ping pointer-events-auto hover:shadow-[#5e0005] transition-colors font-thin duration-1000"
         >
           Login
         </button>
@@ -134,7 +135,7 @@ const Login = () => {
       <nav className="lg:flex lg:justify-between">
         {/* Enlace para registrar una cuenta */}
         <Link
-          className="opacity-90 hover:skew-x-3 hover:opacity-100 hover:scale-110 shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full block duration-500 text-center hover:-translate-y-1 my-5 text-[#ffffff] uppercase text-sm"
+          className="delay-75 opacity-90 hover:skew-x-3 hover:opacity-100 hover:scale-110 shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full block duration-500 text-center hover:-translate-y-1 my-5 text-[#ffffff] uppercase text-sm"
           to="/registrar" // Reemplaza con la ruta correcta
         >
           Don't have an account? Sign up
@@ -142,7 +143,7 @@ const Login = () => {
 
         {/* Enlace para recuperar contraseña */}
         <Link
-          className="opacity-90 hover:skew-x-3 hover:opacity-100 hover:scale-110 block duration-500 hover:-translate-y-1 text-center my-5 text-[#ffffff] shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full uppercase text-sm"
+          className="delay-75 opacity-90 hover:skew-x-3 hover:opacity-100 hover:scale-110 block duration-500 hover:-translate-y-1 text-center my-5 text-[#ffffff] shadow-lg p-2 hover:shadow-white shadow-black-950 rounded-full uppercase text-sm"
           to="/olvidepassword" // Reemplaza con la ruta correcta
         >
           Forgot your password?
