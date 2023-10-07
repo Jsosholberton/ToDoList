@@ -1,6 +1,9 @@
 export default {
   content: ["index.html", "./src/**/*.jsx"],
   theme: {
+    fontFamily:{
+      "Sofia": ['Sofia Sans Condensed', "sans-serif"],
+    },
     extend: {
       colors: {
         'black': {
