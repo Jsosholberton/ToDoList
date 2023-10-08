@@ -1,8 +1,9 @@
 export default {
   content: ["index.html", "./src/**/*.jsx"],
   theme: {
-    fontFamily:{
-      "Sofia": ['Sofia Sans Condensed', "sans-serif"],
+    fontFamily: {
+      'Poppins-300': ['Poppins', 'sans-serif'],
+      'Poppins-700': ['Poppins', 'sans-serif'],
     },
     extend: {
       boxShadow: {

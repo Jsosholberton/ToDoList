@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.font-Poppins-300 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.font-Poppins-700 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
