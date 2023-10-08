@@ -123,7 +123,7 @@ const Login = () => {
           type="submit"
           className=" 
           transition-shadow opacity-70 hover:opacity-100 rounded-full
-          hover:-translate-y-2 hover:duration-500 bg-gradient-to-r from-[#ffffff] via-[#3d3d3d] to-[#000000] hover:to-[#c40c0c]
+          hover:-translate-y-2 hover:duration-1000 bg-gradient-to-r from-[#ffffff] via-[#3d3d3d] to-[#000000] hover:to-[#c40c0c]
           italic w-full py-2
           text-white uppercase delay-75 font-medium rounded-3xl text-white shadow-inner
           active:animate-ping pointer-events-auto hover:shadow-[#5e0005] transition-colors font-thin duration-1000"
